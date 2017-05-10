@@ -10,11 +10,16 @@ d_out[idx] = f * f;
 int main(int argc, char ** argv) {
    const int ARRAY_SIZE = 64;
    const int ARRAY_BYTES = ARRAY_SIZE * sizeof(float);
+   //"Declare the size of the arrange in constant ARRAY_SIZE 
+   //and determine how many bytes it uses declaring constant
+   //ARRAY_BYTES."
 
    int i;
    
 
    // generate the input array on the host
+   // As an convention the host variables carry an initial letter h, and the 
+   // device variables carry an initial letter d
    float h_in[ARRAY_SIZE];
    for (i=0; i< ARRAY_SIZE; i++) {
    h_in[i] = float(i);
